@@ -30,7 +30,7 @@
     max-width: 350px;
 }
 
-#right-column canvas{
+#rightColumn canvas{
     max-width: 30%;
     margin: 0px 2px;
     cursor: pointer;
