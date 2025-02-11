@@ -27,6 +27,7 @@
 
 #canvasContainer{
     margin-top: 5%;
+    max-width: 350px;
 }
 
 #right-column canvas{
