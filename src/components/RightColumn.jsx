@@ -23,6 +23,9 @@ export default function RightColumn({imgType, gridMode, imgUrl}){
             // Set containerReg HTML to empty
             containerRef.current.innerHTML = '';
 
+            const totalGridSize = 300; // The total size for all canvases combined
+            const canvasSize = totalGridSize / gridMode; // Ensure each piece fits within totalGridSize
+
             for(let i = 0; i < gridMode; i++){
                 // Create div to hold row
                 let canvasContainer = document.createElement('div');
@@ -31,6 +34,9 @@ export default function RightColumn({imgType, gridMode, imgUrl}){
                     const canvas = document.createElement('canvas');
                     canvas.width = imgWidth;
                     canvas.height = imgHeight;
+
+                    // Set styling width and height property
+                    canvas.style.width = canvasSize + "px";
 
                     // Download the image when clicked
                     canvas.addEventListener('click', (e) => downloadCanvasImg(false, e));
