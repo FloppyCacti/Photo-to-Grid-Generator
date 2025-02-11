@@ -15,7 +15,7 @@
 @media only screen and (max-width: 1200px) {
   #container{
     width: 500px;
-    height: 1100px;
+    height: 1300px;
     flex-direction: column;
   }
 }
