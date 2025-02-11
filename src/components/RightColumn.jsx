@@ -13,8 +13,8 @@ export default function RightColumn({imgType, gridMode, imgUrl}){
         img.src = imgUrl;
 
         img.onload = () => {
-            // Set p#right-column-info element to visible
-            document.getElementById('right-column-info').className = 'show';
+            // Set p#rightColumnInfo element to visible
+            document.getElementById('rightColumnInfo').className = 'show';
             
             // Set height and width based on img height and weight devided by grid Mode (2, 3, 5)
             const imgWidth = img.width / gridMode;
@@ -81,7 +81,7 @@ export default function RightColumn({imgType, gridMode, imgUrl}){
     return(
         <>
             <div id='rightColumn'>
-                <p id='right-column-info' className='hide'>Click on individual image that would like to download <br/> or <br/> Click on download button for all images.</p>
+                <p id='rightColumnInfo' className='hide'>Click on individual image that would like to download <br/> or <br/> Click on download button for all images.</p>
                 <div ref={containerRef} id='canvasContainer'></div>
                 {imgUrl && (
                     <button onClick={downloadCanvasImg}>Download All</button>

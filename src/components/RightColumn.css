@@ -10,18 +10,18 @@
     flex: 1;
 }
 
-#right-column-info{
+#rightColumnInfo{
     color: #080708;
     font-weight: 1000;
     text-align: center;
     padding: 0px 10px;
 }
 
-#right-column-info.hide{
+#rightColumnInfo.hide{
     display: none;
 }
 
-#right-column-info.show{
+#rightColumnInfo.show{
     display: block;
 }
 
