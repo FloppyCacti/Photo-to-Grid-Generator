@@ -2,7 +2,7 @@
     color: black
 }
 
-#right-column{
+#rightColumn{
     display: flex;
     flex-direction: column;
     align-items: center;

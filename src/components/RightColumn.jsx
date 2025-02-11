@@ -80,7 +80,7 @@ export default function RightColumn({imgType, gridMode, imgUrl}){
 
     return(
         <>
-            <div id='right-column'>
+            <div id='rightColumn'>
                 <p id='right-column-info' className='hide'>Click on individual image that would like to download <br/> or <br/> Click on download button for all images.</p>
                 <div ref={containerRef} id='canvasContainer'></div>
                 {imgUrl && (
