@@ -6,6 +6,18 @@
     flex: 1;
 }
 
+#gridModeButtonContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+#gridModeButtonContainer  button{
+    font-size: 20px;
+    width: 100px;
+}
+
 #gridFormatTitle{
     margin: 0px;
 }
