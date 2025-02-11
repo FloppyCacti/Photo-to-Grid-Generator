@@ -29,7 +29,7 @@ export default function LeftColumn({setImgType, imgUrl, setImgUrl}){
 
     return(
         <>
-            <div id="left-column">
+            <div id="leftColumn">
                 {/* add different grdi type buttons here */}
                     <h1 id='gridFormatTitle'>3x3 Grid</h1>
                     <p id='imgRequirement'>*Image must be in JPEG or PNG format.</p>
