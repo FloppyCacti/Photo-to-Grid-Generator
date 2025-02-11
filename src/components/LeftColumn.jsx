@@ -1,6 +1,6 @@
 import './LeftColumn.css'
 
-export default function LeftColumn({setImgType, imgUrl, setImgUrl}){
+export default function LeftColumn({gridMode, setGridMode, setImgType, imgUrl, setImgUrl}){
     // Get Img URL and show error
     const  handleImageUpload = (event) => {
         const file = event.target.files[0];
@@ -30,29 +30,33 @@ export default function LeftColumn({setImgType, imgUrl, setImgUrl}){
     return(
         <>
             <div id="leftColumn">
-                {/* add different grdi type buttons here */}
-                    <h1 id='gridFormatTitle'>3x3 Grid</h1>
-                    <p id='imgRequirement'>*Image must be in JPEG or PNG format.</p>
-                    <div>
-                        {!imgUrl ? (
-                            <div id='placeholderContainer'>
-                                <p id='placeholderText'>Upload Image</p>
-                            </div>
-                        ) : (
-                            <div id='uploadedImageContainer'>
-                                <img src={imgUrl} alt='Uploaded Preview' id='uploadedImage'></img>
-                            </div>
-                        )}
-                    </div>
-                    <div id='uploadImgContainer'>
-                        <label id='uploadImgLabel' for='fileName'>Choose a image:</label>
-                        <input id='uploadImgInput'
-                               type='file'
-                               name='fileName' 
-                               accept='image/png, image/jpeg, image/jpg'
-                               onChange={handleImageUpload}/>
-                    </div>
-                    <p id='imgLoadError' className='hide'>Error Loading File</p>
+                <div id="gridModeButtonContainer">
+                    <button onClick={() => setGridMode(2)}>2x2</button>
+                    <button onClick={() => setGridMode(3)}>3x3</button>
+                    <button onClick={() => setGridMode(5)}>5x5</button>
+                </div>
+                <h1 id='gridFormatTitle'>{gridMode}x{gridMode} Grid</h1>
+                <p id='imgRequirement'>*Image must be in JPEG or PNG format.</p>
+                <div>
+                    {!imgUrl ? (
+                        <div id='placeholderContainer'>
+                            <p id='placeholderText'>Upload Image</p>
+                        </div>
+                    ) : (
+                        <div id='uploadedImageContainer'>
+                            <img src={imgUrl} alt='Uploaded Preview' id='uploadedImage'></img>
+                        </div>
+                    )}
+                </div>
+                <div id='uploadImgContainer'>
+                    <label id='uploadImgLabel' for='fileName'>Choose a image:</label>
+                    <input id='uploadImgInput'
+                            type='file'
+                            name='fileName' 
+                            accept='image/png, image/jpeg, image/jpg'
+                            onChange={handleImageUpload}/>
+                </div>
+                <p id='imgLoadError' className='hide'>Error Loading File</p>
             </div>
         </>
     )
