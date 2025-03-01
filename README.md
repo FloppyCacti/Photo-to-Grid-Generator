@@ -3,7 +3,7 @@
 Slice a image into seprate 2x2, 3x3 or 5x5 grid images
 
 ## Usage
-You can donwload indvidual images or click the 'Download All' button which download a zip files containing all the images.
+You can download individual images by clicking on them or click the 'Download All' button to download a ZIP file containing all the images.
 
 ## Examples
 ### 2x2:
